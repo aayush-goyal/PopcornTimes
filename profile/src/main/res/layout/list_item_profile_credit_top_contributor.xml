@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="@dimen/margin_x_small"
+    app:cardCornerRadius="@dimen/margin_medium">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorAccentLight">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_user_profile_picture_list_item_profiles_credits_top_contributors"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="@dimen/margin_medium"
+            android:contentDescription="@string/content_desc_iv_user_profile_picture"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tv_user_full_name_list_item_profiles_credits_top_contributors"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_user_full_name_list_item_profiles_credits_top_contributors"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_x_small"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/tv_contribution_type_list_item_profiles_credits_top_contributors"
+            app:layout_constraintStart_toEndOf="@id/iv_user_profile_picture_list_item_profiles_credits_top_contributors"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_contribution_type_list_item_profiles_credits_top_contributors"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:gravity="center"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintBottom_toTopOf="@id/iv_email_list_item_profiles_credits_top_contributors"
+            app:layout_constraintStart_toEndOf="@id/iv_user_profile_picture_list_item_profiles_credits_top_contributors"
+            app:layout_constraintTop_toBottomOf="@id/tv_user_full_name_list_item_profiles_credits_top_contributors"
+            />
+
+        <TextView
+            android:id="@+id/tv_contribution_amount_list_item_profiles_credits_top_contributors"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_large"
+            android:fontFamily="@font/cambay"
+            android:textColor="@color/money"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageView
+            android:id="@+id/iv_email_list_item_profiles_credits_top_contributors"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginEnd="@dimen/margin_x_small"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:src="@drawable/ic_email"
+            android:contentDescription="@string/content_desc_iv_email"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/iv_github_list_item_profiles_credits_top_contributors"
+            app:layout_constraintStart_toEndOf="@id/iv_user_profile_picture_list_item_profiles_credits_top_contributors"
+            app:layout_constraintTop_toBottomOf="@id/tv_contribution_type_list_item_profiles_credits_top_contributors" />
+
+        <ImageView
+            android:id="@+id/iv_github_list_item_profiles_credits_top_contributors"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginHorizontal="@dimen/margin_x_small"
+            android:contentDescription="@string/content_desc_iv_github"
+            android:src="@drawable/ic_github"
+            app:layout_constraintBottom_toBottomOf="@id/iv_email_list_item_profiles_credits_top_contributors"
+            app:layout_constraintEnd_toStartOf="@id/iv_facebook_list_item_profiles_credits_top_contributors"
+            app:layout_constraintStart_toEndOf="@+id/iv_email_list_item_profiles_credits_top_contributors"
+            app:layout_constraintTop_toTopOf="@id/iv_email_list_item_profiles_credits_top_contributors"/>
+
+        <ImageView
+            android:id="@+id/iv_facebook_list_item_profiles_credits_top_contributors"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginHorizontal="@dimen/margin_x_small"
+            android:src="@drawable/ic_facebook"
+            android:contentDescription="@string/content_desc_iv_facebook"
+            app:layout_constraintBottom_toBottomOf="@id/iv_email_list_item_profiles_credits_top_contributors"
+            app:layout_constraintEnd_toStartOf="@id/iv_twitter_list_item_profiles_credits_top_contributors"
+            app:layout_constraintStart_toEndOf="@id/iv_github_list_item_profiles_credits_top_contributors"
+            app:layout_constraintTop_toTopOf="@id/iv_email_list_item_profiles_credits_top_contributors" />
+
+        <ImageView
+            android:id="@+id/iv_twitter_list_item_profiles_credits_top_contributors"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginHorizontal="@dimen/margin_x_small"
+            android:src="@drawable/ic_twitter"
+            android:contentDescription="@string/content_desc_iv_twitter"
+            app:layout_constraintBottom_toBottomOf="@id/iv_email_list_item_profiles_credits_top_contributors"
+            app:layout_constraintEnd_toStartOf="@id/iv_instagram_list_item_profiles_credits_top_contributors"
+            app:layout_constraintStart_toEndOf="@id/iv_facebook_list_item_profiles_credits_top_contributors"
+            app:layout_constraintTop_toTopOf="@id/iv_email_list_item_profiles_credits_top_contributors"/>
+
+        <ImageView
+            android:id="@+id/iv_instagram_list_item_profiles_credits_top_contributors"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="@dimen/margin_x_small"
+            android:src="@drawable/ic_instagram"
+            android:contentDescription="@string/content_desc_iv_instagram"
+            app:layout_constraintBottom_toBottomOf="@id/iv_email_list_item_profiles_credits_top_contributors"
+            app:layout_constraintStart_toEndOf="@id/iv_twitter_list_item_profiles_credits_top_contributors"
+            app:layout_constraintTop_toTopOf="@id/iv_email_list_item_profiles_credits_top_contributors" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

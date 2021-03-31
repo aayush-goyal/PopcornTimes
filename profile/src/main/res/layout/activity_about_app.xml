@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".ui.AboutAppActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- App Logo ImageView -->
+        <ImageView
+            android:id="@+id/iv_app_logo_activity_about_app"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="@dimen/margin_medium"
+            android:contentDescription="@string/content_desc_image_app_logo"
+            app:layout_constraintBottom_toTopOf="@id/tv_app_name_activity_about_app"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- App Name TextView -->
+        <TextView
+            android:id="@+id/tv_app_name_activity_about_app"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_medium"
+            android:text="@string/app_name"
+            android:textAllCaps="true"
+            android:textColor="@color/colorSecondary"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/tv_app_desc_activity_about_app"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_app_logo_activity_about_app" />
+
+        <!-- App Description TextView -->
+        <TextView
+            android:id="@+id/tv_app_desc_activity_about_app"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_medium"
+            android:layout_marginVertical="@dimen/margin_medium"
+            android:paddingHorizontal="@dimen/margin_large"
+            android:gravity="center"
+            android:text="@string/app_desc"
+            android:textColor="@color/colorAccentLight"
+            app:layout_constraintBottom_toTopOf="@id/tv_heading_credits_activity_about_app"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_app_name_activity_about_app" />
+
+        <!-- Heading Credits TextView -->
+        <TextView
+            android:id="@+id/tv_heading_credits_activity_about_app"
+            style="@style/TextViewWithImage"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginVertical="@dimen/margin_small"
+            android:drawableStart="@drawable/ic_credits"
+            android:text="@string/heading_credits"
+            android:textAllCaps="true"
+            android:textColor="@color/colorSecondary"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@id/view_recycler_credits_activity_about_app"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_app_desc_activity_about_app" />
+
+        <!-- Credits RecyclerView -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/view_recycler_credits_activity_about_app"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_medium"
+            android:layout_marginVertical="@dimen/margin_small"
+            app:layout_constraintBottom_toTopOf="@id/tv_heading_top_contributors_activity_about_app"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_heading_credits_activity_about_app" />
+
+        <TextView
+            android:id="@+id/tv_heading_top_contributors_activity_about_app"
+            style="@style/TextViewWithImage"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginVertical="@dimen/margin_small"
+            android:drawableStart="@drawable/ic_top_contributors"
+            android:text="@string/heading_top_contributors"
+            android:textAllCaps="true"
+            android:textColor="@color/colorSecondary"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@id/view_recycler_top_contributors_activity_about_app"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_recycler_credits_activity_about_app" />
+
+        <!-- Top Contributor RecyclerView -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/view_recycler_top_contributors_activity_about_app"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_medium"
+            android:layout_marginVertical="@dimen/margin_small"
+            app:layout_constraintBottom_toTopOf="@id/tv_text_contribution_activity_about_app"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_heading_top_contributors_activity_about_app" />
+
+        <!-- Make Contributions TextView -->
+        <TextView
+            android:id="@+id/tv_text_contribution_activity_about_app"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:layout_marginHorizontal="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:paddingHorizontal="@dimen/margin_medium"
+            android:paddingVertical="@dimen/margin_small"
+            android:gravity="center"
+            android:text="@string/text_make_contribution_desc"
+            android:textColor="@color/colorAccentLight"
+            app:layout_constraintBottom_toTopOf="@id/tv_text_email_activity_about_app"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_recycler_top_contributors_activity_about_app" />
+
+        <!-- Email Us TextView -->
+        <TextView
+            android:id="@+id/tv_text_email_activity_about_app"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:layout_marginEnd="@dimen/margin_small"
+            android:layout_marginStart="@dimen/margin_small"
+            android:layout_marginTop="@dimen/margin_x_large"
+            android:text="@string/text_email_us"
+            android:textColor="@color/colorAccentLight"
+            app:layout_constraintBottom_toTopOf="@id/ib_twitter_activity_about_app"
+            app:layout_constraintEnd_toStartOf="@id/ib_email_activity_about_app"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_text_contribution_activity_about_app"
+            app:layout_constraintHorizontal_chainStyle="packed" />
+
+        <ImageButton
+            android:id="@+id/ib_email_activity_about_app"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:layout_marginEnd="@dimen/margin_small"
+            android:layout_marginStart="@dimen/margin_small"
+            android:layout_marginTop="@dimen/margin_x_large"
+            android:src="@drawable/ic_email"
+            android:background="@drawable/background_circular_button_color_accent_light"
+            android:contentDescription="@string/content_desc_button_email"
+            app:layout_constraintBottom_toTopOf="@id/ib_twitter_activity_about_app"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_text_email_activity_about_app"
+            app:layout_constraintTop_toBottomOf="@id/tv_text_contribution_activity_about_app" />
+
+        <!-- Follow Us On TextView -->
+        <TextView
+            android:id="@+id/tv_text_follow_us_activity_about_app"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_small"
+            android:text="@string/text_follow_us"
+            android:textColor="@color/colorAccentLight"
+            app:layout_constraintBottom_toTopOf="@id/ib_github_activity_about_app"
+            app:layout_constraintEnd_toStartOf="@id/ib_facebook_activity_about_app"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ib_email_activity_about_app"
+            app:layout_constraintHorizontal_chainStyle="packed" />
+
+        <!-- Facebook Page ImageButton -->
+        <ImageButton
+            android:id="@+id/ib_facebook_activity_about_app"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="@dimen/margin_small"
+            android:src="@drawable/ic_facebook"
+            android:background="@drawable/background_circular_button_color_accent_light"
+            android:contentDescription="@string/content_desc_button_facebook"
+            app:layout_constraintBottom_toTopOf="@id/ib_github_activity_about_app"
+            app:layout_constraintEnd_toStartOf="@id/ib_twitter_activity_about_app"
+            app:layout_constraintStart_toEndOf="@id/tv_text_follow_us_activity_about_app"
+            app:layout_constraintTop_toBottomOf="@id/ib_email_activity_about_app" />
+
+        <!-- Twitter Page ImageButton -->
+        <ImageButton
+            android:id="@+id/ib_twitter_activity_about_app"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="@dimen/margin_small"
+            android:src="@drawable/ic_twitter"
+            android:background="@drawable/background_circular_button_color_accent_light"
+            android:contentDescription="@string/content_desc_button_twitter"
+            app:layout_constraintBottom_toTopOf="@id/ib_github_activity_about_app"
+            app:layout_constraintEnd_toStartOf="@id/ib_instagram_activity_about_app"
+            app:layout_constraintStart_toEndOf="@id/ib_facebook_activity_about_app"
+            app:layout_constraintTop_toBottomOf="@id/ib_email_activity_about_app" />
+
+        <!-- Instagram Page ImageButton -->
+        <ImageButton
+            android:id="@+id/ib_instagram_activity_about_app"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="@dimen/margin_small"
+            android:src="@drawable/ic_instagram"
+            android:background="@drawable/background_circular_button_color_accent_light"
+            android:contentDescription="@string/content_desc_button_instagram"
+            app:layout_constraintBottom_toTopOf="@id/ib_github_activity_about_app"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ib_twitter_activity_about_app"
+            app:layout_constraintTop_toBottomOf="@id/ib_email_activity_about_app" />
+
+        <!-- Make Contributions At TextView -->
+        <TextView
+            android:id="@+id/tv_text_make_contribution_at_activity_about_app"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_small"
+            android:text="@string/text_make_contributions_at"
+            android:textColor="@color/colorAccentLight"
+            app:layout_constraintBottom_toBottomOf="@id/ib_github_activity_about_app"
+            app:layout_constraintEnd_toStartOf="@id/ib_github_activity_about_app"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/ib_github_activity_about_app"
+            app:layout_constraintHorizontal_chainStyle="packed" />
+
+        <!-- GitHub Repo ImageButton -->
+        <ImageButton
+            android:id="@+id/ib_github_activity_about_app"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="@dimen/margin_small"
+            android:src="@drawable/ic_github"
+            android:background="@drawable/background_circular_button_color_accent_light"
+            android:contentDescription="@string/content_desc_button_github"
+            app:layout_constraintBottom_toTopOf="@id/tv_text_made_with_love_activity_about_app"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_text_make_contribution_at_activity_about_app"
+            app:layout_constraintTop_toBottomOf="@id/ib_twitter_activity_about_app" />
+
+        <!-- Made With Love TextView -->
+        <TextView
+            android:id="@+id/tv_text_made_with_love_activity_about_app"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:layout_marginHorizontal="@dimen/margin_small"
+            android:layout_marginTop="@dimen/margin_x_large"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@id/tv_version_number_activity_about_app"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ib_github_activity_about_app" />
+
+        <!-- Version Number TextView -->
+        <TextView
+            android:id="@+id/tv_version_number_activity_about_app"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_large"
+            android:layout_marginHorizontal="@dimen/margin_small"
+            android:layout_marginTop="@dimen/margin_small"
+            android:text="@string/version_number"
+            android:textColor="@color/colorAccentLight"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_text_made_with_love_activity_about_app" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

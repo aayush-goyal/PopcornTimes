@@ -1,13 +1,6 @@
-A HackerNews Android App.
+The android app for the Popcorn Times platform.
 
-# Changelog
-### [0.1.0] - 2020-02-09
----
-#### Added
-- First commit.
-- Added Launcher Activity.
-
-<br/>
+For change log, please see [CHANGELOG.md](https://github.com/aayush-goyal/PopcornTimes/blob/development/CHANGELOG.md).
 
 ## LICENSE
 

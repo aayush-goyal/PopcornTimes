@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/margin_x_small"
+    android:layout_marginVertical="@dimen/margin_small"
+    app:cardBackgroundColor="@color/colorAccentLight"
+    app:cardCornerRadius="@dimen/margin_medium"
+    app:cardElevation="@dimen/margin_medium"
+    android:background="@color/colorAccentLight">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_title_poster_list_item_title_fragment_bookmarks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/test_image"
+            app:layout_constraintBottom_toTopOf="@id/tv_title_name_list_item_title_fragment_bookmarks"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/tv_title_name_list_item_title_fragment_bookmarks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_x_small"
+            android:gravity="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:maxLines="2"
+            app:layout_constraintBottom_toTopOf="@id/iv_icon_list_item_title_fragment_bookmarks"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_title_poster_list_item_title_fragment_bookmarks" />
+
+        <TextView
+            android:id="@+id/tv_rating_list_item_title_fragment_bookmarks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_x_small"
+            android:textSize="12sp"
+            android:textColor="@color/money"
+            android:textStyle="bold"
+            android:background="@drawable/background_border_rating_list_item_titles"
+            app:layout_constraintBottom_toBottomOf="@id/iv_icon_list_item_title_fragment_bookmarks"
+            app:layout_constraintEnd_toStartOf="@id/iv_icon_list_item_title_fragment_bookmarks"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/iv_icon_list_item_title_fragment_bookmarks" />
+
+        <ImageView
+            android:id="@+id/iv_icon_list_item_title_fragment_bookmarks"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_x_small"
+            android:src="@drawable/ic_movie"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tv_year_list_item_title_fragment_bookmarks"
+            app:layout_constraintStart_toEndOf="@id/tv_rating_list_item_title_fragment_bookmarks"
+            app:layout_constraintTop_toBottomOf="@id/tv_title_name_list_item_title_fragment_bookmarks" />
+
+        <TextView
+            android:id="@+id/tv_year_list_item_title_fragment_bookmarks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintBottom_toBottomOf="@id/iv_icon_list_item_title_fragment_bookmarks"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/iv_icon_list_item_title_fragment_bookmarks"
+            app:layout_constraintTop_toTopOf="@id/iv_icon_list_item_title_fragment_bookmarks" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

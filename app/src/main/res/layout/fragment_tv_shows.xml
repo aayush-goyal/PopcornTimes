@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".ui.home.TVShowsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Recently Viewed TextView -->
+        <TextView
+            android:id="@+id/tv_recently_viewed_fragment_tv_shows"
+            style="@style/TextViewWithImage"
+            android:layout_margin="@dimen/margin_medium"
+            android:drawableStart="@drawable/ic_recently_viewed"
+            android:text="@string/recently_viewed"
+            android:textColor="@color/colorSecondary"
+            app:layout_constraintBottom_toTopOf="@id/view_recycler_recently_viewed_fragment_tv_shows"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Recently Viewed RecyclerView -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/view_recycler_recently_viewed_fragment_tv_shows"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_medium"
+            app:layout_constraintBottom_toTopOf="@id/tv_top_rated_fragment_tv_shows"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_recently_viewed_fragment_tv_shows" />
+
+        <!-- Top Rated TextView -->
+        <TextView
+            android:id="@+id/tv_top_rated_fragment_tv_shows"
+            style="@style/TextViewWithImage"
+            android:layout_margin="@dimen/margin_medium"
+            android:drawableStart="@drawable/ic_top_rated"
+            android:text="@string/top_rated"
+            android:textColor="@color/colorSecondary"
+            app:layout_constraintBottom_toTopOf="@id/view_recycler_top_rated_fragment_tv_shows"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_recycler_recently_viewed_fragment_tv_shows" />
+
+        <!-- Top Rated RecyclerView -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/view_recycler_top_rated_fragment_tv_shows"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_medium"
+            app:layout_constraintBottom_toTopOf="@id/tv_most_viewed_fragment_tv_shows"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_top_rated_fragment_tv_shows" />
+
+        <!-- Most Viewed TextView -->
+        <TextView
+            android:id="@+id/tv_most_viewed_fragment_tv_shows"
+            style="@style/TextViewWithImage"
+            android:layout_margin="@dimen/margin_medium"
+            android:drawableStart="@drawable/ic_most_viewed"
+            android:text="@string/most_viewed"
+            android:textColor="@color/colorSecondary"
+            app:layout_constraintBottom_toTopOf="@id/view_recycler_most_viewed_fragment_tv_shows"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_recycler_top_rated_fragment_tv_shows" />
+
+        <!-- Most Viewed RecyclerView -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/view_recycler_most_viewed_fragment_tv_shows"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_medium"
+            app:layout_constraintBottom_toTopOf="@id/tv_most_popular_fragment_tv_shows"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_most_viewed_fragment_tv_shows" />
+
+        <!-- Most Popular TextView -->
+        <TextView
+            android:id="@+id/tv_most_popular_fragment_tv_shows"
+            style="@style/TextViewWithImage"
+            android:layout_margin="@dimen/margin_medium"
+            android:drawableStart="@drawable/ic_most_popular"
+            android:text="@string/most_popular"
+            android:textColor="@color/colorSecondary"
+            app:layout_constraintBottom_toTopOf="@id/view_recycler_most_popular_fragment_tv_shows"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_recycler_most_viewed_fragment_tv_shows" />
+
+        <!-- Most Popular RecyclerView -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/view_recycler_most_popular_fragment_tv_shows"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_medium"
+            app:layout_constraintBottom_toTopOf="@id/tv_genres_fragment_tv_shows"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_most_popular_fragment_tv_shows" />
+
+        <!-- Genres TextView -->
+        <TextView
+            android:id="@+id/tv_genres_fragment_tv_shows"
+            style="@style/TextViewWithImage"
+            android:layout_margin="@dimen/margin_medium"
+            android:drawableStart="@drawable/ic_genres"
+            android:text="@string/genres"
+            android:textColor="@color/colorSecondary"
+            app:layout_constraintBottom_toTopOf="@id/view_recycler_genres_fragment_tv_shows"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_recycler_most_popular_fragment_tv_shows"/>
+
+        <!-- Genres RecyclerView -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/view_recycler_genres_fragment_tv_shows"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:layout_marginStart="@dimen/margin_medium"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_genres_fragment_tv_shows" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

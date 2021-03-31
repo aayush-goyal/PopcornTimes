@@ -1,2 +1,6 @@
+include ':profile'
+include ':core'
+include ':favorites'
+include ':onboarding'
 include ':app'
 rootProject.name='Popcorn Times'
