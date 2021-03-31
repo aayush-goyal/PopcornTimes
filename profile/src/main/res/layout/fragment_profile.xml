@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".profile.ProfileFragment">
+
+    <!-- Profile Image View -->
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_profile_image_fragment_profile"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:civ_border_color="@color/colorAccentLight"
+        app:civ_border_width="1dp"
+        app:layout_constraintBottom_toTopOf="@id/tv_full_name_fragment_profile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+    <!-- Name TextView -->
+    <TextView
+        android:id="@+id/tv_full_name_fragment_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorAccentLight"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/tv_contribution_amount_fragment_profile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_profile_image_fragment_profile" />
+
+    <!-- Contribution TextView -->
+    <TextView
+        android:id="@+id/tv_contribution_amount_fragment_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/margin_large"
+        android:paddingVertical="@dimen/margin_medium"
+        android:background="@drawable/background_color_accent_light"
+        android:drawablePadding="@dimen/margin_medium"
+        android:drawableStart="@drawable/ic_contribution"
+        android:fontFamily="@font/cambay"
+        android:text="@string/amount_zero"
+        android:textColor="@color/money"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@id/guideline_fragment_profile_30p"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_full_name_fragment_profile" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_fragment_profile_30p"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.3" />
+
+    <!-- Basic Details Text View -->
+    <TextView
+        android:id="@+id/tv_heading_basic_details_fragment_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_large"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:text="@string/heading_basic_details"
+        android:textColor="@color/colorSecondary"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/view_separator_basic_details_fragment_profile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline_fragment_profile_30p" />
+
+    <View
+        android:id="@+id/view_separator_basic_details_fragment_profile"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="@dimen/margin_small"
+        android:background="@color/colorSecondary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_heading_basic_details_fragment_profile" />
+
+    <!-- Gender TextView -->
+    <TextView
+        android:id="@+id/tv_gender_fragment_profile"
+        style="@style/TextViewWithImage"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@id/layout_linear_country_fragment_profile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_separator_basic_details_fragment_profile" />
+
+    <LinearLayout
+        android:id="@+id/layout_linear_country_fragment_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@id/tv_dob_fragment_profile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_gender_fragment_profile">
+
+        <!-- Country ImageView -->
+        <ImageView
+            android:id="@+id/iv_country_fragment_profile"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="@dimen/margin_medium" />
+
+        <!-- Country TextView -->
+        <TextView
+            android:id="@+id/tv_country_fragment_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:textColor="@color/colorAccentLight"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <!-- DOB TextView -->
+    <TextView
+        android:id="@+id/tv_dob_fragment_profile"
+        style="@style/TextViewWithImage"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:drawableStart="@drawable/ic_birthday"
+        app:layout_constraintBottom_toTopOf="@id/tv_heading_contact_details_fragment_profile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_linear_country_fragment_profile" />
+
+    <!-- Contact Details Text View -->
+    <TextView
+        android:id="@+id/tv_heading_contact_details_fragment_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_large"
+        android:layout_marginTop="@dimen/margin_large"
+        android:text="@string/heading_contact_details"
+        android:textColor="@color/colorSecondary"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/view_separator_contact_details_fragment_profile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_dob_fragment_profile" />
+
+    <View
+        android:id="@+id/view_separator_contact_details_fragment_profile"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="@dimen/margin_small"
+        android:background="@color/colorSecondary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_heading_contact_details_fragment_profile" />
+
+    <!-- Email TextView -->
+    <TextView
+        android:id="@+id/tv_email_fragment_profile"
+        style="@style/TextViewWithImage"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:drawableStart="@drawable/ic_email_color_accent_light"
+        app:layout_constraintBottom_toTopOf="@id/tv_phone_number_fragment_profile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_separator_contact_details_fragment_profile" />
+
+    <!-- Phone Number TextView -->
+    <TextView
+        android:id="@+id/tv_phone_number_fragment_profile"
+        style="@style/TextViewWithImage"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:drawableStart="@drawable/ic_phone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_email_fragment_profile" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_fragment_profile_75p"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.75" />
+
+    <!-- About App TextView -->
+    <TextView
+        android:id="@+id/tv_about_app_fragment_profile"
+        style="@style/TextViewWithImage"
+        android:drawableStart="@drawable/ic_about_app"
+        android:text="@string/text_about_app"
+        android:textColor="@color/colorSecondary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline_fragment_profile_75p"
+        app:layout_constraintVertical_bias="0.35" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

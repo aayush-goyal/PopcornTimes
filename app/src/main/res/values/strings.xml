@@ -1,3 +1,106 @@
 <resources>
+    <!-- Popcorn Times -->
     <string name="app_name">Popcorn Times</string>
+    <string name="content_desc_button_back">Image Button for Back functionality.</string>
+    <string name="content_desc_button_confirm">Image Button for Confirm functionality.</string>
+    <string name="content_desc_button_female">Select gender as Female.</string>
+    <string name="content_desc_button_male">Select gender as Male.</string>
+    <string name="content_desc_button_proceed">Image Button for Proceed functionality.</string>
+    <string name="content_desc_iv_user_profile_picture">User\'s Profile Picture.</string>
+
+    <string name="currency_indian_rupee">₹</string>
+
+    <!-- Launcher Activity -->
+    <string name="content_desc_iv_load_activity_launcher">Image to show animation while the app initialization is done in background.</string>
+
+    <!-- Sign-in Activity -->
+    <string name="ready">ready\nto\ngrab</string>
+    <string name="popcorn">Popcorn</string>
+
+    <!-- Phone Auth Activity -->
+    <!-- Phone Number Fragment -->
+    <string name="enter_phone_number">enter your phone number</string>
+    <string name="find">find</string>
+    <string name="something">find something\ngreat to watch</string>
+    <string name="hello">hello!</string>
+    <string name="movies_tv_shows">movies\ntv shows</string>
+
+    <!-- Phone Number Verification Fragment -->
+    <string name="resend_code">resend code</string>
+    <string name="verify_phone_number">verify phone number</string>
+    <string name="verify_phone_number_desc">please enter the 6 digit\nSMS verification code\nsent to your phone.</string>
+
+    <!-- New User Basic Details Activity -->
+    <!-- Name Details Fragment -->
+    <string name="content_desc_progress_icon">Icon for showing progress made in filling information for new user set-up.</string>
+    <string name="first_name">first name</string>
+    <string name="middle_name">middle name</string>
+    <string name="last_name">last name</string>
+
+    <!-- Contact Details Fragment -->
+    <string name="email">email</string>
+    <string name="phone_number">phone number</string>
+
+    <!-- Basic Details Fragment -->
+    <string name="country">country</string>
+    <string name="date_of_birth">date of birth</string>
+    <string name="female">female</string>
+    <string name="male">male</string>
+
+    <!-- Home Activity -->
+    <string name="title_activity_home">Home</string>
+    <!-- Home Fragment -->
+    <string name="title_home_fragment">Home</string>
+
+    <!-- Movies Fragment -->
+    <string name="genres">genres</string>
+    <string name="most_popular">most popular</string>
+    <string name="most_viewed">most viewed</string>
+    <string name="recently_viewed">recently viewed</string>
+    <string name="top_rated">top rated</string>
+
+    <!-- TV Shows Fragment -->
+
+    <!-- Search Fragment -->
+    <string name="title_search_fragment">Search</string>
+
+    <!-- Favorites Fragment -->
+    <string name="title_favorites_fragment">Favorites</string>
+
+    <!-- Profile Fragment -->
+    <string name="heading_basic_details">Basic Details</string>
+    <string name="heading_contact_details">Contact Details</string>
+    <string name="amount_zero">₹0</string>
+    <string name="text_about_app">About App</string>
+    <string name="text_female">Female</string>
+    <string name="text_male">Male</string>
+    <string name="title_profile_fragment">Profile</string>
+
+    <!-- Edit Profile Activity -->
+    <string name="edit_profile">edit profile</string>
+
+    <!-- About App Activity -->
+    <string name="app_desc">Popcorn Times is a simple yet powerful platform for all the movie and binge-watch lovers. You can see popular, top-rated, most viewed movies and TV shows at any given time. You can add mark your favourite titles and also add titles to your watchlist.</string>
+    <string name="content_desc_button_email">Image Button for sending email at Popcorn Times.</string>
+    <string name="content_desc_iv_email">Image View for sending email to the person.</string>
+    <string name="content_desc_button_facebook">Image Button for visiting Facebook page of Popcorn Times.</string>
+    <string name="content_desc_iv_facebook">Image View for visiting Facebook page of the person.</string>
+    <string name="content_desc_button_github">Image Button for visiting GitHub repo of Popcorn Times.</string>
+    <string name="content_desc_iv_github">Image View for visiting GitHub profile of the person.</string>
+    <string name="content_desc_button_instagram">Image Button for visiting Instagram page of Popcorn Times.</string>
+    <string name="content_desc_iv_instagram">Image View for visiting Instagram page of the person.</string>
+    <string name="content_desc_button_twitter">Image Button for visiting Twitter page of Popcorn Times.</string>
+    <string name="content_desc_iv_twitter">Image View for visiting Twitter page of the person.</string>
+    <string name="content_desc_image_app_logo">Image for App logo.</string>
+    <string name="heading_credits">Credits</string>
+    <string name="heading_top_contributors">Top Contributors</string>
+    <string name="text_email_us">Email Us @:</string>
+    <string name="text_follow_us">Follow Us On:</string>
+    <string name="text_make_contributions_at">Make Contributions @:</string>
+    <string name="text_make_contribution_desc">In order to remain Free and Open Source Software we require continuous contributions from our users and those volunteering towards a free and open source community.</string>
+    <string name="version_number">Version Number v1.0.0</string>
+    <string name="title_onboarding">Onboarding</string>
+    <string name="title_favorites">Favorites</string>
+    <string name="title_profile">Profile</string>
+
 </resources>

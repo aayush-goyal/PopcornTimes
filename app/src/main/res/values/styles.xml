@@ -1,11 +1,60 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:fontFamily">@font/oxygen</item>
+    </style>
+
+    <!-- Style for basic details Edit Texts in Phone Number Fragment and New User Basic Details Activity. -->
+    <style name="DetailsEditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="background">@android:color/transparent</item>
+        <item name="android:letterSpacing">0.02</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/colorAccentLight</item>
+        <item name="android:textColorHint">@color/colorAccentLight</item>
+        <item name="android:textSize">25sp</item>
+    </style>
+
+    <!-- Style for OTP Edit Texts in Phone Number Verificatipn Fragment -->
+    <style name="OTPEditText">
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:inputType">number</item>
+        <item name="android:layout_marginEnd">@dimen/margin_small</item>
+        <item name="android:layout_marginStart">@dimen/margin_small</item>
+        <item name="android:maxLength">1</item>
+        <item name="android:textColor">@color/colorAccentLight</item>
+        <item name="android:textSize">25sp</item>
+    </style>
+
+    <!-- Style for Proceed Button -->
+    <style name="ProceedButton">
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:background">@drawable/background_circular_button_color_secondary</item>
+        <item name="android:src">@drawable/ic_right_arrow</item>
+    </style>
+
+    <!-- TextView with Image -->
+    <style name="TextViewWithImage">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingBottom">@dimen/margin_medium</item>
+        <item name="android:paddingEnd">@dimen/margin_medium</item>
+        <item name="android:paddingStart">@dimen/margin_medium</item>
+        <item name="android:paddingTop">@dimen/margin_medium</item>
+        <item name="android:drawablePadding">@dimen/margin_medium</item>
+        <item name="android:textColor">@color/colorAccentLight</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
     </style>
 
 </resources>

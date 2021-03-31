@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".onboarding.ContactDetailsFragment">
+
+    <LinearLayout
+        android:id="@+id/layout_linear_progress_fragment_contact_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_large"
+        android:layout_marginStart="@dimen/margin_large"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_fragment_contact_details_25p"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_progress_1_fragment_contact_details"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/background_image_view_progress_done"
+            android:contentDescription="@string/content_desc_progress_icon" />
+
+        <View
+            android:layout_width="80dp"
+            android:layout_height="3dp"
+            android:background="@color/colorSecondary" />
+
+        <ImageView
+            android:id="@+id/iv_progress_2_fragment_contact_details"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/background_image_view_progress_outline"
+            android:contentDescription="@string/content_desc_progress_icon" />
+
+        <View
+            android:layout_width="80dp"
+            android:layout_height="3dp"
+            android:background="@color/colorSecondary" />
+
+        <ImageView
+            android:id="@+id/iv_progress_3_fragment_contact_details"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/background_image_view_progress_outline"
+            android:contentDescription="@string/content_desc_progress_icon" />
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_fragment_contact_details_25p"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <!-- Email EditText -->
+    <EditText
+        android:id="@+id/et_email_fragment_contact_details"
+        style="@style/DetailsEditText"
+        android:layout_margin="@dimen/margin_large"
+        android:inputType="textEmailAddress"
+        android:background="@android:color/transparent"
+        android:hint="@string/email"
+        android:autofillHints="emailAddress"
+        app:layout_constraintBottom_toTopOf="@id/et_phone_number_fragment_contact_details"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline_fragment_contact_details_25p"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+    <!-- Phone Number EditText -->
+    <EditText
+        android:id="@+id/et_phone_number_fragment_contact_details"
+        style="@style/DetailsEditText"
+        android:layout_margin="@dimen/margin_large"
+        android:inputType="phone"
+        android:background="@android:color/transparent"
+        android:hint="@string/phone_number"
+        android:autofillHints="phoneNumber"
+        app:layout_constraintBottom_toTopOf="@id/guideline_fragment_contact_details_70p"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_email_fragment_contact_details" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_fragment_contact_details_70p"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.7" />
+
+    <LinearLayout
+        android:id="@+id/layout_linear_back_navigation_button_fragment_contact_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline_fragment_contact_details_70p"
+        app:layout_constraintVertical_bias="0.3" >
+
+        <!-- Back Button -->
+        <ImageButton
+            android:id="@+id/button_back_fragment_contact_details"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:background="@drawable/background_circular_button_color_secondary"
+            android:contentDescription="@string/content_desc_button_back"
+            android:src="@drawable/ic_right_arrow"
+            android:scaleX="-1" />
+
+        <!-- Proceed Button -->
+        <ImageButton
+            android:id="@+id/button_proceed_fragment_contact_details"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:background="@drawable/background_circular_button_color_secondary"
+            android:contentDescription="@string/content_desc_button_proceed"
+            android:src="@drawable/ic_right_arrow" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

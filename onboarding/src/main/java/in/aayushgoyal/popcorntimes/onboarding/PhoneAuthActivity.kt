@@ -1,12 +1,12 @@
-package `in`.aayushgoyal.popcorntimes
+package `in`.aayushgoyal.popcorntimes.onboarding
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
-class LauncherActivity : AppCompatActivity() {
+class PhoneAuthActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_launcher)
+        setContentView(R.layout.activity_phone_auth)
     }
 }

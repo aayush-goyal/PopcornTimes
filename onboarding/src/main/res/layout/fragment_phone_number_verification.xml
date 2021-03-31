@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".onboarding.PhoneNumberVerificationFragment">
+
+    <TextView
+        android:id="@+id/tv_heading_1_fragment_phone_number_verification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/verify_phone_number"
+        android:textColor="@color/colorSecondary"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/tv_heading_2_fragment_phone_number_verification"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintVertical_bias="1" />
+
+    <TextView
+        android:id="@+id/tv_heading_2_fragment_phone_number_verification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_x_large"
+        android:gravity="center"
+        android:text="@string/verify_phone_number_desc"
+        android:textColor="@color/colorSecondary"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/layout_linear_otp_fragment_phone_number_verification"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_heading_1_fragment_phone_number_verification" />
+
+    <!-- OTP Edit Text -->
+    <LinearLayout
+        android:id="@+id/layout_linear_otp_fragment_phone_number_verification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_large"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@id/guideline_fragment_phone_number_verification_50p"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_heading_2_fragment_phone_number_verification">
+
+        <EditText
+            android:id="@+id/et_otp_1_fragment_phone_number_verification"
+            style="@style/OTPEditText"
+            android:background="@drawable/background_circular_edit_text_otp_outline" />
+
+        <EditText
+            android:id="@+id/et_otp_2_fragment_phone_number_verification"
+            style="@style/OTPEditText"
+            android:background="@drawable/background_circular_edit_text_otp_outline" />
+
+        <EditText
+            android:id="@+id/et_otp_3_fragment_phone_number_verification"
+            style="@style/OTPEditText"
+            android:background="@drawable/background_circular_edit_text_otp_outline" />
+
+        <EditText
+            android:id="@+id/et_otp_4_fragment_phone_number_verification"
+            style="@style/OTPEditText"
+            android:background="@drawable/background_circular_edit_text_otp_outline" />
+
+        <EditText
+            android:id="@+id/et_otp_5_fragment_phone_number_verification"
+            style="@style/OTPEditText"
+            android:background="@drawable/background_circular_edit_text_otp_outline" />
+
+        <EditText
+            android:id="@+id/et_otp_6_fragment_phone_number_verification"
+            style="@style/OTPEditText"
+            android:background="@drawable/background_circular_edit_text_otp_outline" />
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_fragment_phone_number_verification_50p"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <!-- Resend Button -->
+    <Button
+        android:id="@+id/button_resend_code_fragment_phone_number_verification"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="@dimen/margin_x_large"
+        android:background="@drawable/background_regular_button"
+        android:text="@string/resend_code"
+        android:textColor="@color/colorSecondary"
+        android:textSize="18sp"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toTopOf="@id/layout_linear_back_navigation_button_fragment_phone_number_verification"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline_fragment_phone_number_verification_50p"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintVertical_bias="0.25" />
+
+    <LinearLayout
+        android:id="@+id/layout_linear_back_navigation_button_fragment_phone_number_verification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_x_large"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_resend_code_fragment_phone_number_verification">
+
+        <!-- Back Button -->
+        <ImageButton
+            android:id="@+id/button_back_fragment_phone_number_verification"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:background="@drawable/background_circular_button_color_secondary"
+            android:contentDescription="@string/content_desc_button_back"
+            android:src="@drawable/ic_right_arrow"
+            android:scaleX="-1" />
+
+        <!-- Confirm Button -->
+        <ImageButton
+            android:id="@+id/button_confirm_fragment_phone_number_verification"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:background="@drawable/background_circular_button_color_secondary"
+            android:contentDescription="@string/content_desc_button_confirm"
+            android:src="@drawable/ic_confirm" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".onboarding.PhoneNumberFragment">
+
+    <TextView
+        android:id="@+id/tv_find_fragment_phone_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_large"
+        android:text="@string/find"
+        android:textColor="@color/colorSecondary"
+        android:textSize="35sp"
+        app:layout_constraintBottom_toTopOf="@id/tv_movies_tv_shows_fragment_phone_number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintVertical_bias="0.7" />
+
+    <TextView
+        android:id="@+id/tv_movies_tv_shows_fragment_phone_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_large"
+        android:gravity="end"
+        android:text="@string/movies_tv_shows"
+        android:textColor="@color/colorSecondary"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/guideline_fragment_phone_number_35p"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_find_fragment_phone_number" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_fragment_phone_number_35p"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.35" />
+
+    <TextView
+        android:id="@+id/tv_hello_fragment_phone_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_large"
+        android:text="@string/hello"
+        android:textColor="@color/colorSecondary"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/tv_something_fragment_phone_number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline_fragment_phone_number_35p"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintVertical_bias="0.4" />
+
+    <TextView
+        android:id="@+id/tv_something_fragment_phone_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/something"
+        android:textColor="@color/colorSecondary"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_fragment_phone_number_65p"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_hello_fragment_phone_number" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_fragment_phone_number_65p"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.65" />
+
+    <!-- Phone Number EditText -->
+    <EditText
+        android:id="@+id/et_enter_phone_number_fragment_phone_number"
+        style="@style/DetailsEditText"
+        android:layout_margin="@dimen/margin_large"
+        android:inputType="phone"
+        android:maxLength="15"
+        android:background="@android:color/transparent"
+        android:hint="@string/enter_phone_number"
+        android:autofillHints="phoneNumber"
+        app:layout_constraintBottom_toTopOf="@id/button_proceed_fragment_phone_number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline_fragment_phone_number_65p"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintVertical_bias="0" />
+
+    <!-- Proceed Button -->
+    <ImageButton
+        android:id="@+id/button_proceed_fragment_phone_number"
+        style="@style/ProceedButton"
+        android:layout_marginTop="@dimen/margin_large"
+        android:contentDescription="@string/content_desc_button_proceed"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_enter_phone_number_fragment_phone_number" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

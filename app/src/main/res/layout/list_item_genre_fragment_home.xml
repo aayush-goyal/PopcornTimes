@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/margin_small"
+    android:orientation="vertical"
+    android:background="@android:color/transparent">
+
+    <ImageButton
+        android:id="@+id/iv_genre_icon_list_item_genre_fragment_home"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:background="@drawable/background_circular_button_color_accent_light" />
+
+    <TextView
+        android:id="@+id/tv_genre_name_list_item_genre_fragment_home"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:lines="2"
+        android:textColor="@color/colorAccentLight" />
+
+</LinearLayout>
